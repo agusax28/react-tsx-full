@@ -38,11 +38,20 @@ Empezaremos creando el siguiente archivo de estilos para que nuestro teclado no 
 cutre.
 
 **Archivo:** `/reactjs-estado-lab/src/style.css`
+<<<<<<< HEAD
 ```tsx
+=======
+
+```css
+>>>>>>> fb80c79 (Sincronizar labs y ejemplos funcionales con remoto)
 .panel-codigo-secreto {
   width: 150px;
   background-color: #242424;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb80c79 (Sincronizar labs y ejemplos funcionales con remoto)
 .display {
   height: 50px;
   font-size: 2rem;
@@ -54,6 +63,7 @@ cutre.
 .fila-teclas {
   display: flex;
 }
+<<<<<<< HEAD
 .tecla {
 background-color: transparent;
     color: #34e89e;
@@ -62,6 +72,18 @@ background-color: transparent;
     height: 50px;
     cursor: pointer;
 }
+=======
+
+.tecla {
+  background-color: transparent;
+  color: #34e89e;
+  border: 1px solid #34e89e;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+}
+
+>>>>>>> fb80c79 (Sincronizar labs y ejemplos funcionales con remoto)
 .tecla:hover {
   opacity: 0.6;
 }
@@ -139,10 +161,7 @@ createRoot(document.getElementById('root')).render(<App />);
 ```
 Ahora ya deberían de estar aplicándose los estilos correctamente.
 
-En un tema posterior veremos porque hay que hacerlo así y que otras formas de
-```tsx
-         trabajar con los estilos tenemos en React.
-```
+En un tema posterior veremos porque hay que hacerlo así y que otras formas de trabajar con los estilos tenemos en React.
 Ahora vamos a empezar a añadirle la lógica que nos piden al componente PanelCodigoSecreto.
 
 Empezaremos por añadirle el estado que necesita. Utilizaremos dentro del estado la clave
@@ -269,41 +288,42 @@ class PanelCodigoSecreto extends Component {
       codigoActual: ''
     }
   }
-```
-handleClick(event) {
 
-```tsx
-    render() {
-      return (
-        <div className="panel-codigo-secreto">
-          <div className="display">
-            {this.state.codigoActual}
+  handleClick(event) {
+    // lógica por implementar
+  }
+
+  render() {
+    return (
+      <div className="panel-codigo-secreto">
+        <div className="display">
+          {this.state.codigoActual}
+        </div>
+        <div className="teclas" onClick={this.handleClick}>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">1</button>
+            <button type="button" className="tecla">2</button>
+            <button type="button" className="tecla">3</button>
           </div>
-          <div className="teclas" onClick={this.handleClick}>
-            <div className="fila-teclas">
-               <button type="button" className="tecla">1</button>
-               <button type="button" className="tecla">2</button>
-               <button type="button" className="tecla">3</button>
-            </div>
-            <div className="fila-teclas">
-               <button type="button" className="tecla">4</button>
-               <button type="button" className="tecla">5</button>
-               <button type="button" className="tecla">6</button>
-            </div>
-            <div className="fila-teclas">
-               <button type="button" className="tecla">7</button>
-               <button type="button" className="tecla">8</button>
-               <button type="button" className="tecla">9</button>
-            </div>
-            <div className="fila-teclas">
-               <button type="button" className="tecla">CLD</button>
-               <button type="button" className="tecla">0</button>
-               <button type="button" className="tecla">DEL</button>
-            </div>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">4</button>
+            <button type="button" className="tecla">5</button>
+            <button type="button" className="tecla">6</button>
+          </div>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">7</button>
+            <button type="button" className="tecla">8</button>
+            <button type="button" className="tecla">9</button>
+          </div>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">CLD</button>
+            <button type="button" className="tecla">0</button>
+            <button type="button" className="tecla">DEL</button>
           </div>
         </div>
-      )
-    }
+      </div>
+    )
+  }
 }
 
 export default PanelCodigoSecreto;
@@ -326,43 +346,51 @@ class PanelCodigoSecreto extends Component {
       codigoActual: ''
     }
   }
+<<<<<<< HEAD
 
 handleClick(event) {
 const teclaPulsada = event.target.textContent;
 const { codigoActual, codigoSecreto } = this.state;
+=======
+>>>>>>> fb80c79 (Sincronizar labs y ejemplos funcionales con remoto)
 
-render() {
-  return (
-    <div className="panel-codigo-secreto">
-      <div className="display">
-        {this.state.codigoActual}
+  handleClick(event) {
+    const teclaPulsada = event.target.textContent;
+    const { codigoActual, codigoSecreto } = this.state;
+    // siguiente lógica en pasos posteriores
+  }
+
+  render() {
+    return (
+      <div className="panel-codigo-secreto">
+        <div className="display">
+          {this.state.codigoActual}
+        </div>
+        <div className="teclas" onClick={this.handleClick}>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">1</button>
+            <button type="button" className="tecla">2</button>
+            <button type="button" className="tecla">3</button>
+          </div>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">4</button>
+            <button type="button" className="tecla">5</button>
+            <button type="button" className="tecla">6</button>
+          </div>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">7</button>
+            <button type="button" className="tecla">8</button>
+            <button type="button" className="tecla">9</button>
+          </div>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">CLD</button>
+            <button type="button" className="tecla">0</button>
+            <button type="button" className="tecla">DEL</button>
+          </div>
+        </div>
       </div>
-      <div className="teclas" onClick={this.handleClick}>
-        <div className="fila-teclas">
-           <button type="button" className="tecla">1</button>
-           <button type="button" className="tecla">2</button>
-           <button type="button" className="tecla">3</button>
-        </div>
-        <div className="fila-teclas">
-           <button type="button" className="tecla">4</button>
-           <button type="button" className="tecla">5</button>
-           <button type="button" className="tecla">6</button>
-        </div>
-        <div className="fila-teclas">
-           <button type="button" className="tecla">7</button>
-           <button type="button" className="tecla">8</button>
-           <button type="button" className="tecla">9</button>
-        </div>
-        <div className="fila-teclas">
-           <button type="button" className="tecla">CLD</button>
-           <button type="button" className="tecla">0</button>
-
-                   <button type="button" className="tecla">DEL</button>
-                </div>
-              </div>
-            </div>
-        )
-    }
+    )
+  }
 }
 
 export default PanelCodigoSecreto;
@@ -446,6 +474,7 @@ class PanelCodigoSecreto extends Component {
     }
     this.handleClick = this.handleClick.bind(this);
   }
+<<<<<<< HEAD
 handleClick(event) {
 
 const teclaPulsada = event.target.textContent;
@@ -458,41 +487,55 @@ if (teclaPulsada === 'CLD') {
 } else {
 
 if (codigoActual.length < 4) {
+=======
 
+  handleClick(event) {
+    const teclaPulsada = event.target.textContent;
+    const { codigoActual, codigoSecreto } = this.state;
+>>>>>>> fb80c79 (Sincronizar labs y ejemplos funcionales con remoto)
+
+    if (teclaPulsada === 'CLD') {
+      // lógica en pasos siguientes
+    } else if (teclaPulsada === 'DEL') {
+      // lógica en pasos siguientes
+    } else {
+      if (codigoActual.length < 4) {
+        // lógica en pasos siguientes
+      }
     }
-}
+  }
 
-    render() {
-      return (
-        <div className="panel-codigo-secreto">
-          <div className="display">
-            {this.state.codigoActual}
+  render() {
+    return (
+      <div className="panel-codigo-secreto">
+        <div className="display">
+          {this.state.codigoActual}
+        </div>
+        <div className="teclas" onClick={this.handleClick}>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">1</button>
+            <button type="button" className="tecla">2</button>
+            <button type="button" className="tecla">3</button>
           </div>
-          <div className="teclas" onClick={this.handleClick}>
-            <div className="fila-teclas">
-               <button type="button" className="tecla">1</button>
-               <button type="button" className="tecla">2</button>
-               <button type="button" className="tecla">3</button>
-            </div>
-            <div className="fila-teclas">
-               <button type="button" className="tecla">4</button>
-               <button type="button" className="tecla">5</button>
-               <button type="button" className="tecla">6</button>
-            </div>
-            <div className="fila-teclas">
-               <button type="button" className="tecla">7</button>
-               <button type="button" className="tecla">8</button>
-               <button type="button" className="tecla">9</button>
-            </div>
-            <div className="fila-teclas">
-               <button type="button" className="tecla">CLD</button>
-               <button type="button" className="tecla">0</button>
-               <button type="button" className="tecla">DEL</button>
-            </div>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">4</button>
+            <button type="button" className="tecla">5</button>
+            <button type="button" className="tecla">6</button>
+          </div>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">7</button>
+            <button type="button" className="tecla">8</button>
+            <button type="button" className="tecla">9</button>
+          </div>
+          <div className="fila-teclas">
+            <button type="button" className="tecla">CLD</button>
+            <button type="button" className="tecla">0</button>
+            <button type="button" className="tecla">DEL</button>
           </div>
         </div>
-      )
-    }
+      </div>
+    )
+  }
 }
 
 export default PanelCodigoSecreto;
