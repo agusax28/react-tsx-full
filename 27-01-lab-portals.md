@@ -109,9 +109,9 @@ return (
     <button type="button" onClick={() => setIsClosed(false)}>Abrir modal</button>
 
 {!isClosed && <Modal onClose={() => setIsClosed(true)}>
-```
+
 Hola mundo!
-```tsx
+
       </Modal>}
     </div>
 )

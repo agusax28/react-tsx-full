@@ -103,9 +103,9 @@ const Caja = () => {
 
 return (
   <div style={{width: '100px', height: '100px', backgroundColor: 'darkred', position: 'absolute', left: '0px', top:
-```
+
 '0px'}}>
-```tsx
+
     </div>
   )
 }
@@ -149,9 +149,8 @@ const Caja = () => {
 
 return (
   <div style={{width: '100px', height: '100px', backgroundColor: 'darkred', position: 'absolute', left: coords.posX,
-```
+
 top: coords.posY}}>
-```tsx
     </div>
   )
 }
@@ -199,9 +198,8 @@ const dispatchAction = (e) => {
 
 return (
   <div style={{width: '100px', height: '100px', backgroundColor: 'darkred', position: 'absolute', left: coords.posX,
-```
+
 top: coords.posY}}>
-```tsx
     </div>
   )
 }
@@ -212,14 +210,14 @@ Para moverla con las flechas del teclado, necesitamos añadir un listener del ev
 la página del navegador cuando se cargue este componente, además de que tendremos que quitar
 el listener si el componente se elimina.
 
-```tsx
+
 Vamos a usar el hook de useEffect donde añadiremos estos listeners y como solo queremos que
-```
+
 este hook se ejecute una sola vez, le pasaremos como segundo parámetro un array vacio.
 
-```tsx
+
 Y para poder eliminar el listener tendremos que devolver dentro del useEffect una función en la
-```
+
 que llamemos al removeEventListener.
 
 **Archivo:** `/reactjs-hooks-usereducer-lab/src/components/Caja.tsx`
@@ -264,9 +262,8 @@ useEffect(() => {
 
 return (
   <div style={{width: '100px', height: '100px', backgroundColor: 'darkred', position: 'absolute', left: coords.posX,
-```
+
 top: coords.posY}}>
-```tsx
     </div>
   )
 }
